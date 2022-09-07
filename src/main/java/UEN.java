@@ -1,3 +1,5 @@
+package main.java;
+
 public class UEN {
     public char format;
     public int year;

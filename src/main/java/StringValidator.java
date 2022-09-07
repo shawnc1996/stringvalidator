@@ -1,17 +1,20 @@
+package main.java;
+
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import static java.util.Map.entry;
-
 public class StringValidator {
     private static final int currentYear = 2022;
-    private static final Map<Character, Integer> yearMap = Map.ofEntries(entry('T',20),
-            entry('S',19),
-            entry('R',18));
-
+    private static final Map<Character, Integer> yearMap = new HashMap<>();
+    private static void init() {
+        yearMap.put('T',20);
+        yearMap.put('S',19);
+        yearMap.put('R',18);
+    }
 
     public static void main(String[] args) {
-
+        init();
         while(true) {
             Scanner input = new Scanner(System.in);
             System.out.println("Enter Quit to Exit");
